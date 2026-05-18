@@ -99,22 +99,12 @@ class FusionPowerPlant : public cyclus::Facility  {
   double reserve_inventory;  
 
   #pragma cyclus var { \
-    "doc": "Equilibrium quantity of tritium which is sequestered in the system and no longer accessable", \
+    "doc": "Equilibrium quantity of tritium which is sequestered in the system and no longer accessible", \
     "tooltip": "sequestered tritium equilibrium quantity, should be startup-reserve inventory", \
     "units": "kg", \
     "uilabel": "Equilibrium Quantity of Sequestered Tritium" \
   }
   double sequestered_equilibrium; 
-
-  #pragma cyclus var { \
-    "default": 0.9, \
-    "doc": "Fraction of desired startup ( = reserve + sequestered) tritium inventory required for initial startup. ", \
-    "tooltip": "Fraction of reserve required for startup", \
-    "units": "dimensionless", \
-    "range": [0, 1], \
-    "uilabel": "Tritium Startup Fraction" \
-  }
-  double tritium_startup_fraction; 
 
   #pragma cyclus var { \
     "doc": "Fresh fuel commodity", \
